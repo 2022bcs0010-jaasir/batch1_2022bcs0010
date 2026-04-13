@@ -44,9 +44,10 @@ jobs:
       - name: Build docker image
         run: |
           
-          docker build -t batch1_2022bcs0010:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0010:$TAG .
+    
       - name: Push docker image
         run: |
           
-          docker push ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0010:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0010:$TAG
     
