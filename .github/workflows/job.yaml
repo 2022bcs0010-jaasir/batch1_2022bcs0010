@@ -43,10 +43,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build docker image
         run: |
-          TAG={github.run_number}
+          TAG=${{ github.run_number }}
           docker build -t my-image:$TAG .
       - name: Push docker image
         run: |
-          TAG={github.run_number}
+          TAG=${{ github.run_number }}
           docker push ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0010:$TAG
     
