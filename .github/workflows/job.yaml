@@ -1,4 +1,4 @@
-name: lab exam
+name: lab_exam
 
 on:
   push:
