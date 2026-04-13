@@ -44,7 +44,7 @@ jobs:
       - name: Build docker image
         run: |
           TAG=${{ github.run_number }}
-          docker build -t my-image:$TAG .
+          docker build -t batch1_2022bcs0010:$TAG .
       - name: Push docker image
         run: |
           TAG=${{ github.run_number }}
